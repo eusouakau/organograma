@@ -1,7 +1,7 @@
 import React from 'react';
-import './TextField.css';
+import './CampoTexto.css';
 
-const TextField = (props) => {
+const CampoTexto = (props) => {
     return (
       <div className="text-field">
         <label>{props.label}</label>
@@ -10,4 +10,4 @@ const TextField = (props) => {
     );
   }
   
-export default TextField;
+export default CampoTexto;
