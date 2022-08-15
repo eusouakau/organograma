@@ -7,9 +7,14 @@ import "./Formulario.css";
 const Formulario = () => {
   const itens = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
 
+  const aoSalvar = (evento) => {
+    evento.preventDefault();
+    console.log("foi submetido")
+  }
+  
   return (
     <section className="formulario">
-      <form>
+      <form onSubmit={aoSalvar}>
         <h2>Preencha os dados para criar o card do colaborador</h2>
         <TextField label="Nome" placeholder="Digite seu nome" />
         <TextField label="Cargo" placeholder="Digite seu cargo" />
