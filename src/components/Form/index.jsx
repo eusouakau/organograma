@@ -16,10 +16,10 @@ const Formulario = () => {
     <section className="formulario">
       <form onSubmit={aoSalvar}>
         <h2>Preencha os dados para criar o card do colaborador</h2>
-        <TextField label="Nome" placeholder="Digite seu nome" />
-        <TextField label="Cargo" placeholder="Digite seu cargo" />
+        <TextField obrigatorio={true} label="Nome" placeholder="Digite seu nome" />
+        <TextField obrigatorio={true}label="Cargo" placeholder="Digite seu cargo" />
         <TextField label="Imagem" placeholder="Digite a url da imagem" />
-        <ListaSuspensa label="Time" itens={itens} />
+        <ListaSuspensa obrigatorio={true} label="Time" itens={itens} />
         <Botao>Criar</Botao>
       </form>
     </section>
