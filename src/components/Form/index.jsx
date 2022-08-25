@@ -5,7 +5,6 @@ import Botao from "../Botao";
 import "./Formulario.css";
 
 const Formulario = (props) => {
-  const itens = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
 
   const [nome, setNome] = useState('');
   const [cargo, setCargo] = useState('');
@@ -47,7 +46,7 @@ const Formulario = (props) => {
         <ListaSuspensa 
           obrigatorio={true} 
           label="Time" 
-          itens={itens} 
+          itens={props.itens} 
           valor={item}
           aoAlterado={valor => setItem(valor)}
         />
