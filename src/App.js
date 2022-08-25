@@ -3,8 +3,7 @@ import Banner from './components/Banner';
 import Formulario from './components/Form';
 
 
-class App extends Component {
-  render() {
+function App() {
     return (
       <div className="App">
         <Banner />
@@ -12,6 +11,5 @@ class App extends Component {
     </div>
     );
   }
-}
 
 export default App;
