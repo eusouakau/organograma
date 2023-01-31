@@ -44,17 +44,23 @@ function App() {
     }
   ];
 
-  const [participantes, setParticipantes] = useState([]);
+  const [colaboradores, setColaboradores] = useState([]);
 
-  const aoNovoParticipanteAdicionado = (participante) => {
-    setParticipantes([...participantes, participante]);
+  const aoNovoColaboradorAdicionado = (colaborador) => {
+    setColaboradores([...colaboradores, colaborador]);
   }
 
   return (
     <div className="App">
       <Banner />
-      <Formulario itens={itens.map(item => item.nome)} aoParticipanteCadastrado={participante => aoNovoParticipanteAdicionado(participante)}/>
-      {itens.map(item => <Time key={item.nome} nome={item.nome} corPrimaria={item.corPrimaria} corSecundaria={item.corSecundaria} />)}
+      <Formulario itens={itens.map(item => item.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
+      {itens.map(item => <Time 
+        key={item.nome} 
+        nome={item.nome} 
+        corPrimaria={item.corPrimaria} 
+        corSecundaria={item.corSecundaria} 
+        colaboradores={colaboradores}
+      />)}
   </div>
   );
 }
