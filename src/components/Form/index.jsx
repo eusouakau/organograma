@@ -16,7 +16,11 @@ const Formulario = (props) => {
     evento.preventDefault();
     props.aoColaboradorCadastrado({
       nome, cargo, imagem, item
-    })
+    });
+
+    setNome('');
+    setCargo('');
+    setImagem('');
   }
   
   return (
