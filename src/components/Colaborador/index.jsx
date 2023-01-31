@@ -3,11 +3,11 @@ import './Colaborador.css';
 
 const Colaborador = () => {
     return (
-        <div>
-            <div>
+        <div className='colaborador'>
+            <div className='cabecalho'>
                 <img src='http://github.com/eusouakau.png' alt='Kauana Henriques'/>
             </div>
-            <div>
+            <div className='rodape'>
                 <h4>Kauana Henriques</h4>
                 <h5>Desenvolvedora</h5>
             </div>
